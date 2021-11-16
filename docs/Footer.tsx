@@ -26,11 +26,11 @@ function Badge({
 export default function Footer({
   version,
   reactSpringVersion,
-  reactUseGestureVersion,
+  useGestureReactVersion,
 }: {
   version: string
   reactSpringVersion: string
-  reactUseGestureVersion: string
+  useGestureReactVersion: string
 }) {
   return (
     <footer className="px-10 py-32 grid md:grid-flow-col md:place-items-center place-content-center gap-8 relative">
@@ -42,7 +42,7 @@ export default function Footer({
       />
       <Badge name="react-spring-bottom-sheet" version={version} />
       <Badge name="react-spring" version={reactSpringVersion} />
-      <Badge name="react-use-gesture" version={reactUseGestureVersion} />
+      <Badge name="@use-gesture/react" version={useGestureReactVersion} />
     </footer>
   )
 }

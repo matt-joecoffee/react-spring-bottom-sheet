@@ -23,11 +23,11 @@ export async function getStaticProps() {
   const [
     { version, description, homepage, name, meta = {} },
     { version: reactSpringVersion },
-    { version: reactUseGestureVersion },
+    { version: useGestureReactVersion },
   ] = await Promise.all([
     import('../package.json'),
     import('react-spring/package.json'),
-    import('react-use-gesture/package.json'),
+    import('@use-gesture/react/package.json'),
   ])
   if (!meta['og:site_name']) {
     meta['og:site_name'] = capitalize(name)
@@ -41,7 +41,7 @@ export async function getStaticProps() {
       name,
       meta,
       reactSpringVersion,
-      reactUseGestureVersion,
+      useGestureReactVersion,
     },
   }
 }
